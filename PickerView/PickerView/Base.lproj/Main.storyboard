@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.7" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6181.2"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PickerView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M6t-VS-Ofw">
+                                <rect key="frame" x="0.0" y="159" width="480" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="480" id="Fq3-82-iSB"/>
+                                    <constraint firstAttribute="height" constant="162" id="ILh-lj-x5C"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="LuX-1C-bhD"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="rLc-Wf-O9M"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7G-9C-iSb">
+                                <rect key="frame" x="214" y="20" width="52" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="xMz-Li-lep"/>
+                                    <constraint firstAttribute="width" constant="52" id="xeu-Qw-EMN"/>
+                                </constraints>
+                                <state key="normal" title="Go to 5">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ChM-kC-HTH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="M6t-VS-Ofw" secondAttribute="centerX" id="EhF-TE-obA"/>
+                            <constraint firstItem="q7G-9C-iSb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Suj-po-owB"/>
+                            <constraint firstAttribute="centerY" secondItem="M6t-VS-Ofw" secondAttribute="centerY" id="XDY-N1-yHG"/>
+                            <constraint firstAttribute="centerX" secondItem="q7G-9C-iSb" secondAttribute="centerX" id="Y8d-Vv-5Ib"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="picker" destination="M6t-VS-Ofw" id="9TV-Ed-g5f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
